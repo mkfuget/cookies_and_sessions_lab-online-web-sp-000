@@ -8,5 +8,6 @@ class ProductsController < ApplicationController
     cart = session[:cart] || []
     cart << params[:product]
     session[:cart] = cart
+    redirect_to '/'
   end
 end
