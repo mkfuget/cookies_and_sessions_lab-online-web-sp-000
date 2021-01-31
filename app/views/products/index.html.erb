@@ -1,4 +1,4 @@
-<%= session[:cart].each do |ser| %>
+<%= cart.each do |ser| %>
   <h1><%=ser%></h1>
 <%end%>
 <%= form_tag('/add') do %>
