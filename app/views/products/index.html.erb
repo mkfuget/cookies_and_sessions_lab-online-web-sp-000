@@ -1,3 +1,8 @@
 <%= current_cart.each do |ser| %>
   <h1><%=ser%></h1>
 <%end%>
+<%= form_with url: "/add", method: :post do |form| %>
+  <%= form.label :add, "Add Product:" %>
+  <%= form.text_field :product %>
+  <%= form.submit "Add" %>
+<% end %>
