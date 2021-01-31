@@ -5,9 +5,8 @@ class ProductsController < ApplicationController
     puts @cart
   end
   def add
-    @item = Item.find(params[:id])
     cart = session[:cart] || []
-    cart << @item.id
+    cart << params[:product]
     session[:cart] = cart
   end
 end
